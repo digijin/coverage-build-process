@@ -9,6 +9,12 @@ module.exports =
       { test: /\.coffee$/, loader: "coffee-loader" }
     ]
   resolve:
+    alias: {}
+    root: [
+      'bower_components'
+      'node_modules'
+      'src'
+    ]
     extensions: [
       ''
       '.coffee'
