@@ -1,3 +1,3 @@
 console.log('yolo')
 
-//#require 'include'
+require('includedObject')
