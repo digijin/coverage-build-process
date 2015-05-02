@@ -1,0 +1,19 @@
+{
+  "name": "coverage-build-process",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "karma start"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/digijin/coverage-build-process.git"
+  },
+  "author": "digijin <james@digijin.com> (https://github.com/digijin)",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/digijin/coverage-build-process/issues"
+  },
+  "homepage": "https://github.com/digijin/coverage-build-process"
+}
