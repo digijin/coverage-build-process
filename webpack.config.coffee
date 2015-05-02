@@ -9,6 +9,13 @@ module.exports =
     loaders: [
       { test: /\.coffee$/, loader: "coffee-loader" }
     ]
+    postLoaders: [
+      {
+        test: /\.js$/
+        exclude: /(test|node_modules|bower_components)\//
+        loader: 'istanbul-instrumenter'
+      }
+    ]
   resolve:
     alias: {}
     root: [
@@ -18,5 +25,8 @@ module.exports =
     ]
     extensions: [
       ''
+      '.js'
       '.coffee'
+      '.html'
+      '.png'
     ]

@@ -29,14 +29,15 @@ module.exports = (config) ->
       'jasmine'
     ]
     files: [
+#      'src/**/*.coffee'
       'test/**/*.spec.coffee'
     ]
 
     exclude: []
     preprocessors:
-
+#      'src/**/*.js': ['coverage']
 #      '**/*.coffee': ['coffee']
-      'test/**/*.spec.coffee': ['webpack', 'sourcemap']
+      'test/**/*.spec.coffee': ['webpack']
 #
     webpack: require './webpack.config'
 #
@@ -44,15 +45,15 @@ module.exports = (config) ->
 #      require 'karma-webpack'
 #    ]
 
-#    coverageReporter:
+    coverageReporter:
 #      instrumenters: { ibrik : require('ibrik') }
 #      instrumenter: {
 #        '**/*.coffee': 'ibrik'
 #      }
-#      reporters: [
-##        {"type": "html", dir: 'coverage/'}
-##        {"type": "text"}
-#      ]
+      reporters: [
+        {"type": "html", dir: 'coverage/'}
+        {"type": "text"}
+      ]
 
 # the default configuration
     htmlReporter:
@@ -72,7 +73,7 @@ module.exports = (config) ->
 #      'growl'
 #      'nyan'
 #      'html'
-#      'coverage'
+      'coverage'
     ]
     port: 9876
     colors: true
