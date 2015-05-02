@@ -1,5 +1,5 @@
 describe 'include', ->
   it 'should be defined', ->
-    include = require 'include'
+    include = require '../src/include'
     expect include
       .toBeDefined()
