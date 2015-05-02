@@ -1,6 +1,7 @@
 module.exports =
   context: __dirname + "/src"
   entry: "./main"
+  devtool: 'inline-source-map'
   output:
     path: __dirname + "/dist"
     filename: "bundle.js"
@@ -11,9 +12,9 @@ module.exports =
   resolve:
     alias: {}
     root: [
+      'src'
       'bower_components'
       'node_modules'
-      'src'
     ]
     extensions: [
       ''

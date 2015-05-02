@@ -36,7 +36,7 @@ module.exports = (config) ->
     preprocessors:
 
 #      '**/*.coffee': ['coffee']
-      'test/**/*.spec.coffee': ['webpack']
+      'test/**/*.spec.coffee': ['webpack', 'sourcemap']
 #
     webpack: require './webpack.config'
 #
