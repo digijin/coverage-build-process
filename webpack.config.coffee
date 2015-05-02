@@ -15,6 +15,11 @@ module.exports =
         exclude: /(test|node_modules|bower_components)\//
         loader: 'istanbul-instrumenter'
       }
+      {
+        test: /\.coffee$/
+        exclude: /(test|node_modules|bower_components)\//
+        loader: 'istanbul-instrumenter'
+      }
     ]
   resolve:
     alias: {}
