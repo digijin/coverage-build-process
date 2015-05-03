@@ -16,5 +16,8 @@ this project tries to accomplish the following:
   - output to html
   - coffeescript source
   - coffee classes
-
+ - gulp
+  - coffeelint
+  - bower install
+  - webpack watch
  - browsersync?

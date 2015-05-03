@@ -2,7 +2,6 @@ App = require 'App'
 div = document.createElement 'div'
 app = new App div
 describe 'App', ->
-
   it 'should have includedObject', ->
     expect app.includedObject
       .toBe require 'includedObject'

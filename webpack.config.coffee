@@ -23,16 +23,11 @@ conf =
     sourceMapFilename: '[file].map'
   module:
   # todo: put ibrik as the instrumenter for coffee source
+  # ins = new require('ibrik').Instrumenter()
+  # ins.instrumentSync 'console.log "yolo"'
     loaders: [
       { test: /\.coffee$/, loader: "coffee-loader" }
       { test: /\.html$/, loader: "ejs-loader" }
-#      {
-#        test: /\.(jpe?g|png|gif|svg)$/i,
-#        loaders: [
-#          'file?hash=sha512&digest=hex&name=[hash].[ext]'
-#          'image?bypassOnDebug&optimizationLevel=7&interlaced=false'
-#        ]
-#      }
       { test: /\.png$/, loader: "img-element!url"}
     ]
     postLoaders: []
