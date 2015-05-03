@@ -37,6 +37,8 @@
     "coffee-script": "^1.9.2",
     "istanbul": "^0.3.13",
     "istanbul-instrumenter-loader": "^0.1.2",
+    "karma-growl-reporter": "^0.1.1",
+    "karma-nyan-reporter": "0.0.60",
     "lodash": "^3.8.0"
   }
 }

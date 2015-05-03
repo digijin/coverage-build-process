@@ -1,5 +1,3 @@
-
-
 module.exports = (config) ->
   config.set
     basePath: ''
@@ -7,23 +5,12 @@ module.exports = (config) ->
       'jasmine'
     ]
     files: [
-#      {pattern: 'src/**/*.coffee', included: false, served: false}
       'test/**/*.spec.coffee'
-#      'test/includedObject.spec.coffee'
     ]
-
     exclude: []
     preprocessors:
-#      'src/**/*.coffee': ['coverage']
-#      '**/*.coffee': ['coffee']
       'test/**/*.spec.coffee': ['webpack']
-#
     webpack: require './webpack.config'
-#
-#    plugins: [
-#      require 'karma-webpack'
-#    ]
-
     coverageReporter:
 #      instrumenters: { ibrik : require('ibrik') }
 #      instrumenter: {
@@ -34,36 +21,20 @@ module.exports = (config) ->
         {"type": "text"}
       ]
 
-# the default configuration
-    htmlReporter:
-      outputDir: 'karma_html' # where to put the reports
-      templatePath: null # set if you moved jasmine_template.html
-      focusOnFailures: true # reports show failures on start
-      namedFiles: false # name files instead of creating sub-directories
-      pageTitle: null # page title for reports; browser info by default
-      urlFriendlyName: false # simply replaces spaces with _ for files/dirs
-# experimental
-      preserveDescribeNesting: false, # folded suites stay folded
-      foldAll: false, # reports start folded (only with preserveDescribeNesting)
-
     reporters: [
       'progress'
 #      'dots'
-#      'growl'
-#      'nyan'
-#      'html'
+      'growl'
+      'nyan'
       'coverage'
     ]
     port: 9876
     colors: true
     logLevel: 'LOG_DISABLE'
     autoWatch: true
-# available browser launchers: https://npmjs.org/browse/keyword/karma-launcher
-# 'Firefox', 'FirefoxDeveloper', 'FirefoxAurora', 'FirefoxNightly'
     browsers: [
       'Chrome'
 #      'Firefox'
 #      'PhantomJS'
     ]
-# if true, Karma captures browsers, runs the tests and exits
     singleRun: false

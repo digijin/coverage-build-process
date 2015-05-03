@@ -1,5 +1,6 @@
 App = require 'App'
-app = new App()
+div = document.createElement 'div'
+app = new App div
 describe 'App', ->
 
   it 'should have includedObject', ->
