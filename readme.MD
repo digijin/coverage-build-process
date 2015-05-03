@@ -8,7 +8,7 @@ this project tries to accomplish the following:
   - javascript
   - coffeescript
   - image
-  - html
+  - underscore templates
   - node modules
   - bower components
  - coverage

@@ -25,6 +25,7 @@ conf =
   # todo: put ibrik as the instrumenter for coffee source
     loaders: [
       { test: /\.coffee$/, loader: "coffee-loader" }
+      { test: /\.html$/, loader: "ejs-loader" }
 #      {
 #        test: /\.(jpe?g|png|gif|svg)$/i,
 #        loaders: [
