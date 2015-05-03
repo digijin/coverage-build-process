@@ -10,14 +10,14 @@ module.exports =
       { test: /\.coffee$/, loader: "coffee-loader" }
     ]
     postLoaders: [
-      {
-        test: /\.js$/
-        exclude: /(test|node_modules|bower_components)\//
-        loader: 'istanbul-instrumenter'
-      }
+#      {
+#        test: /\.js$/
+#        exclude: /(test|node_modules|bower_components)\//
+#        loader: 'istanbul-instrumenter'
+#      }
       {
         test: /\.coffee$/
-        exclude: /(test|node_modules|bower_components)\//
+        exclude: /(test|node_modules|bower_components)\\/
         loader: 'istanbul-instrumenter'
       }
     ]

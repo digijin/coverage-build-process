@@ -10,6 +10,7 @@ this project tries to accomplish the following:
   - image
   - html
  - coverage
+  - ignore tests
   - output to html
   - coffeescript source
   - coffee classes
