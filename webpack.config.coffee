@@ -5,8 +5,12 @@ webpack = require 'webpack'
 
 conf =
   karma: ->
-    @entry = null
-    @module
+#    @entry = null
+    @module.postLoaders.push
+        test: /\.coffee$/
+        exclude: /(test|node_modules|bower_components)\\/
+        loader: 'istanbul-instrumenter'
+    @
   context: __dirname + "/src"
   entry:
     app: "./main"
@@ -21,21 +25,16 @@ conf =
   # todo: put ibrik as the instrumenter for coffee source
     loaders: [
       { test: /\.coffee$/, loader: "coffee-loader" }
-      {
-        test: /\.(jpe?g|png|gif|svg)$/i,
-        loaders: [
-          'file?hash=sha512&digest=hex&name=[hash].[ext]'
-          'image?bypassOnDebug&optimizationLevel=7&interlaced=false'
-        ]
-      }
+#      {
+#        test: /\.(jpe?g|png|gif|svg)$/i,
+#        loaders: [
+#          'file?hash=sha512&digest=hex&name=[hash].[ext]'
+#          'image?bypassOnDebug&optimizationLevel=7&interlaced=false'
+#        ]
+#      }
+      { test: /\.png$/, loader: "img-element!url"}
     ]
-    postLoaders: [
-      {
-        test: /\.coffee$/
-        exclude: /(test|node_modules|bower_components)\\/
-        loader: 'istanbul-instrumenter'
-      }
-    ]
+    postLoaders: []
 
   resolveLoader:
     root: path.join process.cwd(), 'node_modules'

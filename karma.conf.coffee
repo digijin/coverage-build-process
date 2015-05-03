@@ -10,7 +10,7 @@ module.exports = (config) ->
     exclude: []
     preprocessors:
       'test/**/*.spec.coffee': ['webpack']
-    webpack: require './webpack.config'
+    webpack: require('./webpack.config').karma()
     coverageReporter:
 #      instrumenters: { ibrik : require('ibrik') }
 #      instrumenter: {

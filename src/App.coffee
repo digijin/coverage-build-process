@@ -1,5 +1,5 @@
 MyClass = require 'MyClass'
-#tick = require 'image/tick'
+tick = require 'image/tick'
 class App
   constructor: (container) ->
     container.innerHTML = "abc123"
@@ -11,6 +11,6 @@ class App
 #    img = document.createElement 'img'
 #    img.src = tick
 #    console.log tick
-#    container.appendChild img
+    container.appendChild tick
 #throw new Error 'break'
 module.exports = App
