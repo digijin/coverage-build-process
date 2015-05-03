@@ -1,7 +1,12 @@
 path = require 'path'
 webpack = require 'webpack'
 
-module.exports =
+
+
+conf =
+  karma: ->
+    @entry = null
+    @module
   context: __dirname + "/src"
   entry:
     app: "./main"
@@ -9,13 +14,20 @@ module.exports =
   debug: true
   output:
     path: __dirname + "/dist"
-    publicPath: '/'
+#    publicPath: '/'
     filename: "bundle.js"
     sourceMapFilename: '[file].map'
   module:
   # todo: put ibrik as the instrumenter for coffee source
     loaders: [
       { test: /\.coffee$/, loader: "coffee-loader" }
+      {
+        test: /\.(jpe?g|png|gif|svg)$/i,
+        loaders: [
+          'file?hash=sha512&digest=hex&name=[hash].[ext]'
+          'image?bypassOnDebug&optimizationLevel=7&interlaced=false'
+        ]
+      }
     ]
     postLoaders: [
       {
@@ -47,3 +59,7 @@ module.exports =
     )
     # new webpack.optimize.CommonsChunkPlugin("vendor", "vendor.bundle.js")
   ]
+
+
+
+module.exports = conf
