@@ -30,8 +30,8 @@ module.exports = (config) ->
     ]
     files: [
 #      'src/**/*.coffee'
-#      'test/**/*.spec.coffee'
-      'test/includedObject.spec.coffee'
+      'test/**/*.spec.coffee'
+#      'test/includedObject.spec.coffee'
     ]
 
     exclude: []
