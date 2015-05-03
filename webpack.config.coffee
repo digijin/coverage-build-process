@@ -1,4 +1,5 @@
 path = require 'path'
+webpack = require 'webpack'
 
 module.exports =
   context: __dirname + "/src"
@@ -29,9 +30,9 @@ module.exports =
   resolve:
     alias: {}
     root: [
-      'src'
-      'bower_components'
-      'node_modules'
+      path.join process.cwd(), 'src'
+      path.join process.cwd(), 'bower_components'
+      path.join process.cwd(), 'node_modules'
     ]
     extensions: [
       ''
@@ -44,5 +45,5 @@ module.exports =
     new webpack.ResolverPlugin(
       new webpack.ResolverPlugin.DirectoryDescriptionFilePlugin('bower.json', ['main'])
     )
-# new webpack.optimize.CommonsChunkPlugin("vendor", "vendor.bundle.js") #todo: re-add for chunks
+    # new webpack.optimize.CommonsChunkPlugin("vendor", "vendor.bundle.js")
   ]

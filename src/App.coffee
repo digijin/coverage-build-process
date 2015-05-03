@@ -4,5 +4,4 @@ class App
   myClass: new MyClass()
 
 #throw new Error 'break'
-
 module.exports = App
