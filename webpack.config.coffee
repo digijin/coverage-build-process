@@ -1,3 +1,5 @@
+path = require 'path'
+
 module.exports =
   context: __dirname + "/src"
   entry: "./main"
@@ -21,6 +23,9 @@ module.exports =
         loader: 'istanbul-instrumenter'
       }
     ]
+
+  resolveLoader:
+    root: path.join process.cwd(), 'node_modules'
   resolve:
     alias: {}
     root: [

@@ -1,5 +1,6 @@
 
 class MyClass
+  name: 'myClass'
   myfunc: ->
     'value'
 

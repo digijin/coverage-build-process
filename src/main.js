@@ -1,3 +1,4 @@
-console.log('yolo')
+console.log('starting');
 
-require('includedObject')
+var App = require('App');
+new App();

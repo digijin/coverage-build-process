@@ -9,6 +9,8 @@ this project tries to accomplish the following:
   - coffeescript
   - image
   - html
+  - node modules
+  - bower components
  - coverage
   - ignore tests
   - output to html
