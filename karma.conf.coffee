@@ -1,25 +1,3 @@
-#module.exports = (config) ->
-#  config.set
-#  basePath: ''
-#  frameworks: [ 'jasmine' ]
-#  files: [
-#    'src/**/*.coffee'
-#    'test/**/*.coffee'
-#  ]
-#  exclude: []
-#  preprocessors: '**/*.coffee': [ 'coffee' ]
-#  reporters: [ 'progress' ]
-#  port: 9876
-#  colors: true
-#  logLevel: config.LOG_INFO
-#  autoWatch: true
-#  browsers: [
-#    'Chrome'
-#    'Firefox'
-#    'PhantomJS'
-#  ]
-#  singleRun: false
-
 
 
 module.exports = (config) ->
@@ -29,14 +7,14 @@ module.exports = (config) ->
       'jasmine'
     ]
     files: [
-#      'src/**/*.coffee'
+#      {pattern: 'src/**/*.coffee', included: false, served: false}
       'test/**/*.spec.coffee'
 #      'test/includedObject.spec.coffee'
     ]
 
     exclude: []
     preprocessors:
-#      'src/**/*.js': ['coverage']
+#      'src/**/*.coffee': ['coverage']
 #      '**/*.coffee': ['coffee']
       'test/**/*.spec.coffee': ['webpack']
 #
@@ -78,7 +56,6 @@ module.exports = (config) ->
     ]
     port: 9876
     colors: true
-# possible values: config.LOG_DISABLE || config.LOG_ERROR || config.LOG_WARN || config.LOG_INFO || config.LOG_DEBUG
     logLevel: 'LOG_DISABLE'
     autoWatch: true
 # available browser launchers: https://npmjs.org/browse/keyword/karma-launcher

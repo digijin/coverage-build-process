@@ -17,6 +17,9 @@
   },
   "homepage": "https://github.com/digijin/coverage-build-process",
   "devDependencies": {
+    "gulp": "^3.8.11",
+    "gulp-coffeelint": "^0.4.0",
+    "ibrik": "^2.0.0",
     "jasmine-core": "^2.3.0",
     "karma": "^0.12.31",
     "karma-chrome-launcher": "^0.1.8",
