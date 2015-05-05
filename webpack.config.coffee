@@ -5,7 +5,7 @@ webpack = require 'webpack'
 
 conf =
   karma: ->
-#    @entry = null
+    @entry = null
     @module.postLoaders.push
         test: /\.coffee$/
         exclude: /(test|node_modules|bower_components)\\/
@@ -23,10 +23,8 @@ conf =
     sourceMapFilename: '[file].map'
   module:
   # todo: put ibrik as the instrumenter for coffee source
-  # ins = new require('ibrik').Instrumenter()
-  # ins.instrumentSync 'console.log "yolo"'
     loaders: [
-      { test: /\.coffee$/, loader: "coffee-loader" }
+#      { test: /\.coffee$/, loader: "ibrik-loader" }
       { test: /\.html$/, loader: "ejs-loader" }
       { test: /\.png$/, loader: "img-element!url"}
     ]
