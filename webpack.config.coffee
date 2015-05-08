@@ -5,7 +5,7 @@ webpack = require 'webpack'
 
 conf =
   karma: ->
-    @entry = null
+    delete @entry
     @module.postLoaders.push
         test: /\.coffee$/
         exclude: /(test|node_modules|bower_components)\\/
@@ -25,6 +25,7 @@ conf =
   # todo: put ibrik as the instrumenter for coffee source
     loaders: [
 #      { test: /\.coffee$/, loader: "ibrik-loader" }
+      { test: /\.coffee$/, loader: "coffee" }
       { test: /\.html$/, loader: "ejs-loader" }
       { test: /\.png$/, loader: "img-element!url"}
     ]

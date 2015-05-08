@@ -17,33 +17,33 @@
   },
   "homepage": "https://github.com/digijin/coverage-build-process",
   "devDependencies": {
+  },
+  "dependencies": {
+    "coffee-loader": "^0.7.2",
+    "coffee-script": "^1.9.2",
+    "ejs-loader": "^0.2.1",
     "gulp": "^3.8.11",
     "gulp-coffeelint": "^0.4.0",
     "ibrik": "^2.0.0",
+    "img-element-loader": "^1.0.0",
+    "img-loader": "^1.1.0",
+    "istanbul": "^0.3.13",
+    "istanbul-instrumenter-loader": "^0.1.2",
     "jasmine-core": "^2.3.0",
     "karma": "^0.12.31",
     "karma-chrome-launcher": "^0.1.8",
     "karma-coffee-preprocessor": "^0.2.1",
     "karma-coverage": "^0.3.1",
     "karma-firefox-launcher": "^0.1.4",
+    "karma-growl-reporter": "^0.1.1",
     "karma-jasmine": "^0.3.5",
+    "karma-nyan-reporter": "0.0.60",
     "karma-phantomjs-launcher": "^0.1.4",
     "karma-sourcemap-loader": "^0.3.4",
     "karma-webpack": "^1.5.0",
-    "webpack": "^1.8.11"
-  },
-  "dependencies": {
-    "coffee-loader": "^0.7.2",
-    "coffee-script": "^1.9.2",
-    "ejs-loader": "^0.2.1",
-    "img-element-loader": "^1.0.0",
-    "img-loader": "^1.1.0",
-    "istanbul": "^0.3.13",
-    "istanbul-instrumenter-loader": "^0.1.2",
-    "karma-growl-reporter": "^0.1.1",
-    "karma-nyan-reporter": "0.0.60",
     "lodash": "^3.8.0",
     "raw-loader": "^0.5.1",
-    "url-loader": "^0.5.5"
+    "url-loader": "^0.5.5",
+    "webpack": "^1.8.11"
   }
 }

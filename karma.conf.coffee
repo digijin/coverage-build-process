@@ -12,10 +12,6 @@ module.exports = (config) ->
       'test/**/*.spec.coffee': ['webpack']
     webpack: require('./webpack.config').karma()
     coverageReporter:
-#      instrumenters: { ibrik : require('ibrik') }
-#      instrumenter: {
-#        '**/*.coffee': 'ibrik'
-#      }
       reporters: [
         {"type": "html", dir: 'coverage/'}
         {"type": "text"}
@@ -23,7 +19,6 @@ module.exports = (config) ->
 
     reporters: [
       'progress'
-#      'dots'
       'growl'
       'nyan'
       'coverage'
